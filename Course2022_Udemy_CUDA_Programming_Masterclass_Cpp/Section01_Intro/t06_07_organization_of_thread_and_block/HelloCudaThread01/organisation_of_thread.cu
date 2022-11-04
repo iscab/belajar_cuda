@@ -7,7 +7,7 @@
 * - a main function in a cpp file, including a cuh header file
 * note: this is a work-around to compile cu files.
 *
-* version: 08:21 11.08.2022
+* version: 10:00 04.11.2022
 */
 
 #include "cuda_runtime.h"
@@ -30,6 +30,15 @@ __global__ void print_details()
 		gridDim.x, gridDim.y);
 }
 
+__global__ void print_more_details()
+{
+	printf("threadIdx.x : %d, threadIdx.y : %d, threadIdx.z : %d,  blockIdx.x : %d, blockIdx.y : %d, blockIdx.z : %d, blockDim.x: %d, blockDim.y: %d, gridDim.x: %d, gridDim.y: %d  \n",
+		threadIdx.x, threadIdx.y, threadIdx.z,
+		blockIdx.x, blockIdx.y, blockIdx.z,
+		blockDim.x, blockDim.y,
+		gridDim.x, gridDim.y);
+}
+
 int organisation_of_thread()
 {
 	int nx, ny;
@@ -44,7 +53,11 @@ int organisation_of_thread()
 	//cudaDeviceSynchronize();
 
 	// Example 2: blockId
-	print_details << < grid, block >> > ();
+	//print_details << < grid, block >> > ();
+	//cudaDeviceSynchronize();
+
+	// Example 3: threadId & blockId
+	print_more_details << < grid, block >> > ();
 	cudaDeviceSynchronize();
 
 	cudaDeviceReset();
@@ -52,7 +65,7 @@ int organisation_of_thread()
 }
 
 /**
-* version: 08:21 11.08.2022
+* version: 10:00 04.11.2022
 *
 * End of file
 */
