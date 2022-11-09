@@ -1,14 +1,14 @@
 ﻿/**
 * Hello CUDA World
 *
-* it is not working, after compiled with
+* it is working, after compiled with
 * - Visual C++ 2022
 * - CUDA 11.7
 * no compiling error, but I don't know why  
 * notes:  use CUDA option in New Project in Visual C++ 2022  
 * 
 * 
-* version: 10:45 09.11.2022
+* version: 10:55 09.11.2022
 */
 
 #include "cuda_runtime.h"
@@ -31,7 +31,7 @@ int main()
 }
 
 /**
-* version: 10:45 09.11.2022
+* version: 10:55 09.11.2022
 *
 * End of file
 */
