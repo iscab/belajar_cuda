@@ -8,7 +8,7 @@
 * no compiling error, but I don't know why
 * notes:  use CUDA option in New Project in Visual C++ 2022
 *
-* version: 10:45 17.11.2022
+* version: 10:47 17.11.2022
 */
 
 #include "cuda_runtime.h"
@@ -44,6 +44,8 @@ int main()
 	// threadblocks in a grid
 	dim3 block(8);
 	dim3 grid(1);
+	//dim3 block(4);
+	//dim3 grid(2);
 
 	unique_idx_calc_threadIdx << < grid, block >> > (d_data);
 	cudaDeviceSynchronize();
@@ -53,7 +55,7 @@ int main()
 }
 
 /**
-* version: 10:45 17.11.2022
+* version: 10:47 17.11.2022
 *
 * End of file
 */
