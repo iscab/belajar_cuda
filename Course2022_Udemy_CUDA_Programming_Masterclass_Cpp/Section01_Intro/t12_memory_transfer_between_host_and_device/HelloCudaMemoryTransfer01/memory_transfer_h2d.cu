@@ -1,5 +1,5 @@
 ﻿/**
-* Memory tranfer from host to device: cu file
+* Memory transfer from host to device: cu file
 *
 * it is working, after compiled with
 * - Visual C++ 2022
@@ -7,7 +7,7 @@
 * no compiling error, but I don't know why
 * notes:  use CUDA option in New Project in Visual C++ 2022
 *
-* version: 09:41 06.02.2023
+* version: 09:43 06.02.2023
 */
 
 #include "cuda_runtime.h"
@@ -65,7 +65,7 @@ int main()
 }
 
 /**
-* version: 09:41 06.02.2023
+* version: 09:43 06.02.2023
 *
 * End of file
 */

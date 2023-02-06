@@ -1,5 +1,5 @@
 ﻿/**
-* Memory tranfer from host to device: cu file
+* Memory transfer from host to device: cu file
 * when the host data is smaller than device memory
 *
 * it is working, after compiled with
@@ -8,7 +8,7 @@
 * no compiling error, but I don't know why
 * notes:  use CUDA option in New Project in Visual C++ 2022
 *
-* version: 09:42 06.02.2023
+* version: 09:43 06.02.2023
 */
 
 #include "cuda_runtime.h"
@@ -80,7 +80,7 @@ int main()
 }
 
 /**
-* version: 09:42 06.02.2023
+* version: 09:43 06.02.2023
 *
 * End of file
 */
